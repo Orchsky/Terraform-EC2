@@ -6,14 +6,10 @@
 # Breakdown
 - VPC:
     - internet gateway
-    - nat gateway (public)
-    - 2 subnets (1 public / 1 private)
-    - for public subnet it would have to target the igw
-    - for private subent it would have to target nat gateway
+    - subnet (public / private)
     - routing tables:
         - associate public and private subnet routes
-        - public route has to have public subnet target igw / subnet association (destination 0.0.0.0/0)
-        - private route has to have private subnet target nat gateway / subnet associated (destination 0.0.0.0/0)
+        - public route has to have public subnet target igw / subnet association
         - security group:
             - port 22 ssh open
 - EC2:
